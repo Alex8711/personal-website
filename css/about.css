@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.navLinks li {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.img1 {
+  grid-area: img1;
+  background: linear-gradient(360deg, #1c1c1c 10%, #1c1c1c 360%);
+}
+.about1 {
+  grid-area: about1;
+  background-image: linear-gradient(360deg, #1c1c1c 10%, #1c1c1c 360%);
+  background-color: #1c1c1c;
+}
+.img2 {
+  grid-area: img2;
+  background: linear-gradient(360deg, #1c1c1c 10%, #670aa6 360%);
+}
+.about2 {
+  grid-area: about2;
+  background: linear-gradient(360deg, #1c1c1c 10%, #670aa6 360%);
+}
+.img3 {
+  grid-area: img3;
+}
+.about3 {
+  grid-area: about3;
+  background: linear-gradient(360deg, #1c1c1c 10%, #2c3ba3 360%);
+}
+
+body {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  background-color: #1c1c1c;
+  grid-template-columns: auto;
+  grid-template-rows: 2fr 3fr 3fr 3fr 3fr 3fr 3fr;
+  grid-template-areas: "nav" "about1" "img1" "about2" "img2" "about3" "img3";
+  row-gap: 10px;
+}
+
+a {
+  text-decoration-line: none;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 30px 50px;
+  font-family: "Open Sans", sans-serif;
+  background-color: #edf1fd;
+}
+
+li a:hover {
+  background-color: #292929;
+  color: #fff !important;
+  font-weight: bold;
+  transition: all ease 0.4s;
+}
+li a {
+  padding: 3px 15px;
+  color: #6c707c;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+.aboutPage {
+  background-color: #292929;
+  color: #fff !important;
+  font-weight: bold;
+  transition: all ease 0.4s;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.about1,
+.about2,
+.about3 {
+  display: grid;
+}
+p {
+  color: #ebebeb;
+  font-size: 18px;
+  display: inline-grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 800px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  li a {
+    padding: 10px 15px;
+    color: #6c707c;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  body {
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: 2fr 3fr 3fr 3fr;
+    grid-template-areas: "nav nav" "about1 img1" "about2 img2" "about3 img3";
+    row-gap: 20px;
+  }
+  .about1,
+  .about2,
+  .about3 {
+    padding: 0 0 0 50px;
+  }
+  .img1,
+  .img2,
+  .img3 {
+    padding: 0 50px 0 0;
+  }
+}
